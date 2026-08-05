@@ -1,0 +1,21 @@
+#The *args parameter collects extra positional arguments passed to a function and packs them into a single tuple. You use it when you do not know how many values a user might pass.
+
+def add(*numbers):  #we use " * " for the args -in positional arguments for more arguments
+    c=0
+    for i in numbers:
+        c+=i
+    print(f"sum is {c}")    
+
+add(10,20,30,40,50)    
+
+
+# a parameter with **, Python packs all additional keyworded arguments (arguments passed as name=value) into a dictionary. The parameter name becomes the dictionary key, and the argument value becomes its mapping.
+# **Kwargs (Keyword arguments)
+
+def info(**kwargs):   # we can use anywords in place of kwargs
+    for key ,value in kwargs.items():  #.items used becoz to form in dict form (proper arrangement)
+        print(key,value)
+
+info(name="Pravi",age="20",dept="cse")
+info(name="ram",age="22",dept="AIML")
+info(name="Mani",dept="EEE")
